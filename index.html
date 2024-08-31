@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Technical Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Selectors">Selectors</a>
+        <a class="nav-link" href="#Box_Model">Box Model</a>
+        <a class="nav-link" href="#Flexbox">Flexbox</a>
+        <a class="nav-link" href="#Grid">Grid</a>
+        <a class="nav-link" href="#Animations">Animations</a>
+        <a class="nav-link" href="#Conclusion">Conclusion</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>
+                Cascading Style Sheets (CSS) is a stylesheet language used to describe
+                the presentation of a document written in HTML or XML (including XML
+                dialects such as SVG, MathML or XHTML). CSS describes how elements
+                should be rendered on screen, on paper, in speech, or on other media.
+            </p>
+            <p>
+                CSS is among the core languages of the open web and is standardized
+                across Web browsers according to W3C specifications. Previously, the
+                development of various parts of CSS specification was done
+                synchronously, which allowed the versioning of the latest
+                recommendations. You might have heard about CSS1, CSS2.1, or even
+                CSS3. There will never be a CSS3 or a CSS4; rather, everything is now
+                CSS without a version number.
+            </p>
+            <p>
+                After CSS 2.1, the scope of the specification increased significantly
+                and the progress on different CSS modules started to differ so much,
+                that it became more effective to develop and release recommendations
+                separately per module. Instead of versioning the CSS specification,
+                W3C now periodically takes a snapshot of the latest stable state of
+                the CSS specification and individual modules progress. CSS modules now
+                have version numbers, or levels, such as CSS Color Module Level 5
+            </p>
+        </section>
+        <section class="main-section" id="Selectors">
+            <header>Selectors</header>
+            <p>
+                In CSS, selectors are used to target the HTML elements on our web
+                pages that we want to style. There are a wide variety of CSS selectors
+                available, allowing for fine-grained precision when selecting elements
+                to style. In this article and its sub-articles we'll run through the
+                different types in great detail, seeing how they work.
+            </p>
+            <p>
+                A CSS selector is the first part of a CSS Rule. It is a pattern of
+                elements and other terms that tell the browser which HTML elements
+                should be selected to have the CSS property values inside the rule
+                applied to them. The element or elements which are selected by the
+                selector are referred to as the subject of the selector.
+            </p>
+            <p>Types of selectors include element, class, and ID selectors.</p>
+            <ul>
+                <li>Element selector: `element { ... }`</li>
+                <li>Class selector: `.class { ... }`</li>
+                <li>ID selector: `#id { ... }`</li>
+            </ul>
+            <p>
+            <pre><code>/* Example selectors */
+p {
+    color: blue;
+}
+.intro {
+    font-size: 20px;
+}
+#main {
+    margin: 10px;
+}
+</code></pre></p>
+        </section>
+        <section class="main-section" id="Box_Model">
+            <header>Box Model</header>
+            <p>The CSS box model describes the rectangular boxes that are generated for elements in the document tree and laid out according to the visual formatting model.</p>
+            <p>The box model consists of margins, borders, padding, and the content area.</p>
+            <ul>
+                <li>Margin: Space outside the border</li>
+                <li>Border: Surrounds the padding and content</li>
+                <li>Padding: Space between the content and border</li>
+                <li>Content: The actual content of the element</li>
+            </ul>
+            <pre><code>/* Box model example */
+.box {
+    width: 100px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 20px;
+}
+</code></pre>
+        </section>
+        <section class="main-section" id="Flexbox">
+            <header>Flexbox</header>
+            <p>Flexbox is a layout model that allows elements to align and distribute space within a container.</p>
+            <p>It provides a more efficient way to layout, align, and distribute space among items in a container, even when their size is unknown.</p>
+            <ul>
+                <li>Display: `flex`</li>
+                <li>Flex-direction: `row | column`</li>
+                <li>Justify-content: `flex-start | center | space-between`</li>
+            </ul>
+            <pre><code>/* Flexbox example */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item {
+    flex: 1;
+    padding: 10px;
+}
+</code></pre>
+        </section>
+        <section class="main-section" id="Grid">
+            <header>Grid</header>
+            <p>CSS Grid Layout is a two-dimensional layout system for the web.</p>
+            <p>It allows us to design web pages using a grid-based layout.</p>
+            <ul>
+                <li>Display: `grid`</li>
+                <li>Grid-template-columns: `repeat(3, 1fr)`</li>
+                <li>Grid-gap: `10px`</li>
+            </ul>
+            <pre><code>/* Grid example */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.grid-item {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+}
+</code></pre>
+        </section>
+        <section class="main-section" id="Animations">
+            <header>Animations</header>
+            <p>The animation shorthand CSS property applies an animation between styles. It is a shorthand for animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, animation-play-state, and animation-timeline</p>
+            <pre><code>/* Animation Syntax */ 
+/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+/* @keyframes duration | easing-function | delay | name */
+animation: 3s linear 1s slidein;
+
+/* two animations */
+animation:
+  3s linear slidein,
+  3s ease-out 5s slideout;
+</code></pre>
+        </section>
+        <section class="main-section" id="Conclusion">
+            <header>Conclusion</header>
+            <p>CSS is an essential technology for web development.</p>
+            <p>It allows developers to create visually appealing and responsive websites.</p>
+            <p>Continue learning and experimenting with CSS to master its capabilities.</p>
+            <pre><code>/* Conclusion example */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+</code></pre>
+        </section>
+    </main>
+</body>
+</html>
